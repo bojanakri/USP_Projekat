@@ -5,99 +5,86 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/user_index/css/main.css" />
-		
-		
-	
-<style>
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
+		<style>
+		.accordion {
+			background-color: #eee;
+			color: #444;
+			cursor: pointer;
+			padding: 15px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 15px;
+			transition: 0.4s;
+		}
 
-.active, .accordion:hover {
-  background-color: #ccc; 
-}
+		.active, .accordion:hover {
+			background-color: #ccc; 
+		}
 
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-}
-</style>
-</head>
-
-		
-
+		.panel {
+			padding: 0 18px;
+			display: none;
+			background-color: white;
+			overflow: hidden;
+		}
+		</style>
+	</head>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-
 							<!-- Header -->
 								<header id="header">
-									<strong>MEHWO</strong>	
+									<h1><strong>MEHWO</strong></h1>	
 								</header>
+								</br>
+								<header>
+									<p style="font-size:30px">Reports</p>
+								</header>
+								<button class="accordion">Report 10.06.2019</button>
+								<div class="panel">
+									<p>Patient is feeling bad. It is clearly that he is coping with some emotional stress but he did not want to tell the issue immediately. I recognize suppressed depression and feeling of loneliness.
+									Finally, he admitted that he is going through divorce and he is finding difficulties to go through that.
+									I suggested different kind of group activities which he can visit in order to feel better and not so lonely. 
+									</p>
+								</div>
 
+								<button class="accordion">Report 20.06.2019</button>
+								<div class="panel">
+									<p>Patient took my advice, he started taking dance classes, he joined some company events and now finally he is feeling a little bit better.</p>
+								</div>
 
-								
-								
-<h2>Reports</h2>
+								<button class="accordion">Report 30.06.2019</button>
+								<div class="panel">
+									<p>Patient is feeling nervous. He jumped into his ex wife who was in company with another man. They were apparently in close and romantic relationship. Patient is full of anger, disappointment, and jealousy.</p>
+								</div>
 
-<button class="accordion">Report 10.06.2019</button>
-<div class="panel">
-  <p>Patient is feeling bad. It is clearly that he is coping with some emotional stress but he did not want to tell the issue immediately. I recognize suppressed depression and feeling of loneliness.
-	Finally, he admitted that he is going through divorce and he is finding difficulties to go through that.
-	I suggested different kind of group activities which he can visit in order to feel better and not so lonely. 
-  </p>
-</div>
+								<script>
+									var acc = document.getElementsByClassName("accordion");
+									var i;
 
-<button class="accordion">Report 20.06.2019</button>
-<div class="panel">
-  <p>Patient took my advice, he started taking dance classes, he joined some company events and now finally he is feeling a little bit better.</p>
-</div>
-
-<button class="accordion">Report 30.06.2019</button>
-<div class="panel">
-  <p>Patient is feeling nervous. He jumped into his ex wife who was in company with another man. They were apparently in close and romantic relationship. Patient is full of anger, disappointment, and jealousy.</p>
-</div>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
+									for (i = 0; i < acc.length; i++) {
+										acc[i].addEventListener("click", function() {
+											this.classList.toggle("active");
+											var panel = this.nextElementSibling;
+											if (panel.style.display === "block") {
+												panel.style.display = "none";
+											} else {
+												panel.style.display = "block";
+											}
+										});
+									}
+								</script>
 					
 						</div>
 					</div>
-
-				<!-- Sidebar -->
+					<!-- Sidebar -->
 					<div id="sidebar">
 						<div class="inner">
-
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
@@ -106,12 +93,9 @@ for (i = 0; i < acc.length; i++) {
 									<ul>
 										<li><a href="psychologist_my_profile.html">My Profile</a></li>
 										<li><a href="psychologist_list_of_patients.html">List of patients</a></li>
-									
-										
+										<li><a href="index.html">Log Out</a></li>
 									</ul>
 								</nav>
-
-
 							<!-- Footer -->
 								<footer id="footer">
 									<p class="copyright">&copy; Bojana Krivokapić, Jelena Dumbelović</p>

@@ -5,93 +5,97 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/user_index/css/main.css" />
-		
-		
-	
-<style>
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
+		<style>
+			.accordion {
+				background-color: #eee;
+				color: #444;
+				cursor: pointer;
+				padding: 15px;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 15px;
+				transition: 0.4s;
+			}
 
-.active, .accordion:hover {
-  background-color: #ccc; 
-}
+			.active, .accordion:hover {
+				background-color: #ccc; 
+			}
 
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-}
-</style>
-</head>
-
-		
-
+			.panel {
+				padding: 0 18px;
+				display: none;
+				background-color: white;
+				overflow: hidden;
+			}
+		</style>
+	</head>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-
 							<!-- Header -->
 								<header id="header">
-									<strong>MEHWO</strong>	
+									<h1><strong>MEHWO</strong></h1>	
 								</header>
+								</br>
+								<header>
+									<p style="font-size:30px">Anonymous reports</p>
+								</header>
+								<button class="accordion">Anonymous report 1</button>
+								<div class="panel">
+									<p>I must report behavior of my boss as total unprofessional. He is hitting on me, and trying to blackmail me with my job. If you can not solve this problem I am afraid I must call authorities.</p>
+								</div>
 
+								<button class="accordion">Anonymous report 2</button>
+								<div class="panel">
+									<p>My boss is really demanding. He is always giving us more job at the end of work day! This is so irresponsible, we have home too, and ..</p>
+								</div>
 
-								
-								
-<h2>Anonymous reports</h2>
+								<button class="accordion">Anonymous report 3</button>
+								<div class="panel">
+									<p>I noticed very suspicious behavior yesterday. Two colleagues were whispering something, and later I realized they were planning on robbing our shop.</p>
+								</div>
 
-<button class="accordion">Anonymous report 1</button>
-<div class="panel">
-  <p>I must report behavior of my boss as total unprofessional. He is hitting on me, and trying to blackmail me with my job. If you can not solve this problem I am afraid I must call authorities.</p>
-</div>
+								<script>
+								var acc = document.getElementsByClassName("accordion");
+								var i;
 
-<button class="accordion">Anonymous report 2</button>
-<div class="panel">
-  <p>My boss is really demanding. He is always giving us more job at the end of wok day! This is so irresponsible, we have home too, and ..</p>
-</div>
-
-<button class="accordion">Anonymous report 3</button>
-<div class="panel">
-  <p>I noticed very suspicious behavior yesterday. Two colleagues were whispering something, and later I realized they were planning on robbing our shop.</p>
-</div>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
-					
+								for (i = 0; i < acc.length; i++) {
+									acc[i].addEventListener("click", function() {
+										this.classList.toggle("active");
+										var panel = this.nextElementSibling;
+										if (panel.style.display === "block") {
+											panel.style.display = "none";
+										} else {
+											panel.style.display = "block";
+										}
+									});
+								}
+								</script>			
 						</div>
 					</div>
-
-			
+					<section id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="security.html">Reports</a></li>
+										<li><a href="index.html">Log Out</a></li>
+									</ul>
+								</nav>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Bojana Krivokapić, Jelena Dumbelović</p>
+								</footer>	
+								</div>
+					</section>					
 			</div>
 			<script src="assets/user_index/js/jquery.min.js"></script>
 			<script src="assets/user_index/js/browser.min.js"></script>
