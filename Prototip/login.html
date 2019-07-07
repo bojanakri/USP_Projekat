@@ -26,24 +26,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/login/css/util.css">
 	<link rel="stylesheet" type="text/css" href="assets/login/css/main.css">
 <!--===============================================================================================-->
-		<script>
-			function loginCheck(){
-				if(document.getElementById("username").value!="" && document.getElementById("password").value!=""){
-					if(document.getElementById("username").value=="korisnik" && document.getElementById("password").value=="korisnik123"){
-					window.location.href='user_index.html';
-					}
-					if(document.getElementById("username").value=="sluzbenik" && document.getElementById("password").value=="sluzbenik123"){
-					window.location.href='official_index.html';
-					}
-					if(document.getElementById("username").value=="psiholog" && document.getElementById("password").value=="psiholog123"){
-					window.location.href='psychologist_index.html';
-					}
-					if(document.getElementById("username").value=="zastitnik" && document.getElementById("password").value=="zastitnik123"){
-					window.location.href='security.html';
-					}
-				}
-			}
-		</script>
+	
 </head>
 <body>
 	
@@ -60,17 +43,17 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="Username" id="username">
+						<input class="input100" type="text" name="userid" placeholder="Username" id="username">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password" id="password">
+						<input class="input100" type="password" name="pswrd" placeholder="Password" id="password">
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" onclick="loginCheck();">
+						<button class="login100-form-btn" onclick="check(this.form)">
 							Login
 						</button>
 					</div>
@@ -81,6 +64,32 @@
 						</a>
 					</div>
 				</form>
+				<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "korisnik" && form.pswrd.value == "korisnik123")
+  {
+    window.open('user_index.html')
+  }
+  else if(form.userid.value == "psiholog" && form.pswrd.value == "psiholog123")
+  {
+    window.open('psychologist_index.html')
+  }
+    else if(form.userid.value == "zastitnik" && form.pswrd.value == "zastitnik123")
+  {
+    window.open('security.html')
+  }
+   else if(form.userid.value == "sluzbenik" && form.pswrd.value == "sluzbenik123")
+  {
+    window.open('officer_index.html')
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
 			</div>
 		</div>
 	</div>
